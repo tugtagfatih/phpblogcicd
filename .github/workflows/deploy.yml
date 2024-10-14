@@ -24,7 +24,7 @@ jobs:
           cd phpblogcicd
           git pull
           sudo rm -rf /var/www/html/*
-          sudo cp phpblogcicd /var/www/html -r
+          sudo cp * /var/www/html/ -r
           sudo systemctl restart apache2
 
     - name: Deploy to EC2 2
@@ -39,5 +39,5 @@ jobs:
           cd phpblogcicd
           git pull
           sudo rm -rf /var/www/html/*
-          sudo cp phpblogcicd /var/www/html -r
+          sudo cp * /var/www/html/ -r
           sudo systemctl restart apache2
