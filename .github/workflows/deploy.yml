@@ -23,7 +23,7 @@ jobs:
           cd /home/ubuntu
           git clone https://github.com/tugtagfatih/phpblogcicd.git
           sudo rm -rf /var/www/html/*
-          sudo cp phpblogcicd/ /var/www/html
+          sudo cp phpblogcicd/ /var/www/html -r
           sudo systemctl restart apache2
 
     - name: Deploy to EC2 2
@@ -37,5 +37,5 @@ jobs:
           cd /home/ubuntu/
           git clone https://github.com/tugtagfatih/phpblogcicd.git
           sudo rm -rf /var/www/html/*
-          sudo mv phpblogcicd/ /var/www/html
+          sudo mv phpblogcicd/ /var/www/html -r
           sudo systemctl restart apache2
