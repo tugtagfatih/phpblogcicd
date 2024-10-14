@@ -35,7 +35,7 @@ jobs:
         key: ${{ secrets.EC2_KEY }}  # Private key'inizi GitHub Secrets'a ekleyin ve burada çağırın
         port: 22
         script: |
-          cd /home/ubuntu/
+          cd /home/ubuntu
           sudo rm -rf /home/ubuntu/phpblogcicd
           git clone https://github.com/tugtagfatih/phpblogcicd.git
           sudo rm -rf /var/www/html/*
