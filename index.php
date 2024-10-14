@@ -123,5 +123,8 @@ if ($serendipity['smarty']->getTemplateVars('raw_data') == null) {
 
 $serendipity['smarty']->display(serendipity_getTemplateFile($serendipity['smarty_file'], 'serendipityPath'));
 
+$myip = getHostByName(getHostName());
+echo $myip;
+
 
 /* vim: set sts=4 ts=4 expandtab : */
