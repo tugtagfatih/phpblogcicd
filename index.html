@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Adresi Göster</title>
+</head>
+<body>
+    <h1>Private IP Adresiniz:</h1>
+    <p id="private-ip">
+        <?php
+            $privateIP = $_SERVER['REMOTE_ADDR'];
+            echo $privateIP;
+        ?>
+    </p>
+</body>
+</html>
