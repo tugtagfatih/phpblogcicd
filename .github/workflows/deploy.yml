@@ -23,4 +23,5 @@ jobs:
           cd /home/ubuntu/phpblogcicd
           git stash || true
           git pull
-          sudo mv /phpblogcicd /var/www/html
+          sudo mv phpblogcicd/ /var/www/html
+          sudo systemctl restart apache2
