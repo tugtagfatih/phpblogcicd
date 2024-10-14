@@ -25,3 +25,17 @@ jobs:
           git pull
           sudo mv phpblogcicd/ /var/www/html
           sudo systemctl restart apache2
+
+    - name: Deploy to EC2 2
+      uses: appleboy/ssh-action@master
+      with:
+        host: 13.60.35.81  # EC2 instance IP adresiniz
+        username: ubuntu  # EC2 instance'ınızın kullanıcı adı (Amazon Linux için 'ec2-user', Ubuntu için 'ubuntu')
+        key: ${{ secrets.EC2_KEY }}  # Private key'inizi GitHub Secrets'a ekleyin ve burada çağırın
+        port: 22
+        script: |
+          cd /home/ubuntu/phpblogcicd
+          git stash || true
+          git pull
+          sudo mv phpblogcicd/ /var/www/html
+          sudo systemctl restart apache2
