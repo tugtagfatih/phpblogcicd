@@ -20,7 +20,7 @@ jobs:
         key: ${{ secrets.EC2_KEY }}  # Private key'inizi GitHub Secrets'a ekleyin ve burada çağırın
         port: 22
         script: |
-          cd /home/ubuntu/phpblogdosyalar
+          cd /home/ubuntu/phpblogcicd
           git stash || true
           git pull
           sudo mv /phpblogcicd /var/www/html
