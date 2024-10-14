@@ -25,6 +25,12 @@ jobs:
           git pull
           sudo rm -rf /var/www/html/*
           sudo cp * /var/www/html/ -r
+          
+          sudo chmod 1777 /var/www/html/templates_c
+          sudo chmod 1777 /var/www/html/archives/
+          sudo chmod 1777 /var/www/html/plugins
+          sudo chmod 1777 /var/www/html/uploads/
+          
           sudo systemctl restart apache2
 
     - name: Deploy to EC2 2
