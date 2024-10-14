@@ -21,6 +21,7 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu
+          sudo rm -rf /home/ubuntu/phpblogcicd
           git clone https://github.com/tugtagfatih/phpblogcicd.git
           sudo rm -rf /var/www/html/*
           sudo cp phpblogcicd/ /var/www/html -r
@@ -35,6 +36,7 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu/
+          sudo rm -rf /home/ubuntu/phpblogcicd
           git clone https://github.com/tugtagfatih/phpblogcicd.git
           sudo rm -rf /var/www/html/*
           sudo mv phpblogcicd/ /var/www/html -r
