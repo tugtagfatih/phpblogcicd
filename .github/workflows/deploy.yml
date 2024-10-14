@@ -21,8 +21,8 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu
-          rm -rf *
-          git clone https://github.com/tugtagfatih/phpblogcicd.git
+          cd phpblog
+          git pull
           sudo rm -rf /var/www/html/*
           sudo cp phpblogcicd /var/www/html -r
           sudo systemctl restart apache2
@@ -36,8 +36,8 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu
-          rm -rf *
-          git clone https://github.com/tugtagfatih/phpblogcicd.git
+          cd phpblog
+          git pull
           sudo rm -rf /var/www/html/*
           sudo cp phpblogcicd /var/www/html -r
           sudo systemctl restart apache2
